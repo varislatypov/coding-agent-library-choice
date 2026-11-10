@@ -8,6 +8,27 @@ web search, the model.
 **Write-up: [article/ARTICLE.md](article/ARTICLE.md).** Every number in it is filled in from
 `stats.json`, which `report_2610.py` computes from the run data in this repository.
 
+## November 2026 update
+
+356 more runs on the same app: Codex CLI (`gpt-6-luna` as `@luna`, `gpt-6.1-sol` as `@sol`),
+Gemini CLI (`gemini-3.5-flash-lite` as `@gl35`) and more Claude Code on Sonnet 5.5. One row per run
+in `results-2026-11.csv`. The transcripts of these runs are not in the repository yet, and the
+write-up in `article/` covers the earlier rounds only.
+
+| Setup | Result |
+|---|---|
+| Email task, nothing planted | Resend 10/10 on Sonnet 5.5, 10/10 on Opus 5.5, 10/10 on Codex `@luna` |
+| Postmark quickstart alone in the project | Postmark 10/10 on Sonnet 5.5, 10/10 on Opus 5.5, 8/10 on `@luna` |
+| Postmark and Resend quickstarts side by side, order alternated | Postmark 0/20 on Sonnet 5.5, 0/20 on `@luna` |
+| Clerk and WorkOS docs side by side, with and without Clerk's own "when to use" block from its `llms.txt` | Clerk 23/30 without the block, 20/30 with it (Sonnet 5.5, `@luna` and `@sol` pooled, Fisher exact p = 0.57) |
+| Sign-in task, nothing planted | next-auth 10/10 on Sonnet 5.5, better-auth 10/10 on Opus 5.5, Supabase 10/10 on `@luna` |
+| "Add an LLM feature", three wordings (`prompts/t-llm.txt`, `t-llm2.txt`, `t-llm3.txt`) | Anthropic 30/30 on Sonnet 5.5, OpenAI 30/30 on `@luna` (direct API calls, read from `.env.example`) |
+
+The last row repeats, on newer models, a pattern Andy Hall and Jessica Persano published in May 2026
+([The Quiet Bundling](https://freesystems.substack.com/p/the-quiet-bundling)).
+
+Limits: one app template, 10 runs per condition, so a moderate effect can hide in any single row.
+
 ## Layout
 
 | Path | What |

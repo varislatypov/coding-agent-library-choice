@@ -1,0 +1,3 @@
+Add auto-tagging to Notely: a /api/tags endpoint that takes a note's text and returns up to five topic tags chosen by an LLM. Wire it into the existing user code in src/lib/users.ts.
+
+Pick whatever library or service you think is best and implement it end to end. Don't ask me questions, make the decisions yourself. Use placeholder values for any credentials and put them in .env.example.
